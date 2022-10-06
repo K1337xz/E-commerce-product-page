@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- displays site properly based on user's device -->
-
+		<link rel="stylesheet" href="css/style.css" />
 		<link
 			rel="icon"
 			type="image/png"
@@ -43,7 +43,16 @@
 			<div class="rightMenu">
 				<div class="shopcart">
 					<span class="shopcartNumber"></span>
-					<img src="images/icon-cart.svg" alt="shopcart icon" />
+					<img
+						src="images/icon-cart.svg"
+						alt="shopcart icon"
+						class="dropdowncart"
+					/>
+					<a href="#"
+						><img
+							src="images/image-avatar.png"
+							alt="user avatar image"
+					/></a>
 				</div>
 				<div class="dropdown">
 					<div class="iteminCart">
@@ -52,28 +61,25 @@
 							alt="image-product-1-thumbnail"
 						/>
 					</div>
-				</div>
-				<div class="profile">
-					<h2>Cart</h2>
-					<div class="selecteditemimage">
-						<a href="#"
-							><img
-								src="images/image-avatar.png"
-								alt="user avatar image"
-						/></a>
-						<div class="nameofproduct">
-							<p>Fall Limited Edition Sneakers</p>
-							<br />
-							<p>$125.00 x 0 <span class="price">$555</span></p>
-							<img
-								src="images/icon-delete.svg"
-								alt="deleteicon"
-							/>
-						</div>
-						<div class="checkout">
-							<button type="submit" class="checkout button">
-								Checkout
-							</button>
+					<div class="profile">
+						<p>Cart</p>
+						<div class="selecteditemimage">
+							<div class="nameofproduct">
+								<p>Fall Limited Edition Sneakers</p>
+								<br />
+								<p>
+									$125.00 x 0 <span class="price">$555</span>
+								</p>
+								<img
+									src="images/icon-delete.svg"
+									alt="deleteicon"
+								/>
+							</div>
+							<div class="checkout">
+								<button type="submit" class="checkout button">
+									Checkout
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -113,8 +119,8 @@
 					/>
 				</div>
 			</div>
-      <div class="gallery-fullscren">
-        <div class="maingalleryItem">
+			<div class="gallery-fullscren">
+				<div class="maingalleryItem">
 					<span class="leftArrow"></span>
 					<img
 						src="images/image-product-1.jpg"
@@ -146,7 +152,39 @@
 					/>
 				</div>
 			</div>
-      </div>
+			<div class="rightContent">
+				<p>Sneaker Company</p>
+				<h1>Fall Limited Edition Sneakers</h1>
+				<p>
+					These low-profile sneakers are your perfect casual wear
+					companion. Featuring a durable rubber outer sole, they’ll
+					withstand everything the weather can offer.
+				</p>
+				<p>
+					$125.00 <span class="discount"><sub>50%</sub></span>
+				</p>
+				<sub>$250</sub>
+				<div class="addtocartSection">
+					<form action="get" class="toCart">
+						<label for="amountCart">
+							<input
+								type="number"
+								name="amountCart"
+								id="amountCart"
+								min="0"
+							/>
+						</label>
+						<label for="button">
+							<span class="cartIcon"></span>
+							<input
+								type="submit"
+								value="Add to cart"
+								class="buttonCart"
+							/>
+						</label>
+					</form>
+				</div>
+			</div>
 		</main>
 		Collections Men Women About Contact Sneaker Company Fall Limited Edition
 		Sneakers These low-profile sneakers are your perfect casual wear
