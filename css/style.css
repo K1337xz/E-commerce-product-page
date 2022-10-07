@@ -88,6 +88,7 @@ header .navMenu {
 
 .gallery {
   width: 55%;
+  height: 70vh;
 }
 .gallery .thumbnails {
   display: flex;
@@ -159,4 +160,25 @@ body {
 .rightContent h2 {
   width: 50%;
   font-size: 50px;
+}
+.rightContent p {
+  color: hsl(219deg, 9%, 45%);
+  text-align: left;
+  margin-right: 5rem;
+}
+
+.pricewrapper .pricedisc {
+  display: flex;
+  align-items: center;
+}
+.pricewrapper p {
+  color: hsl(0deg, 0%, 0%);
+}
+.pricewrapper .discount {
+  width: 30%;
+  height: 30%;
+  background-color: hsl(25deg, 100%, 94%);
+  color: hsl(26deg, 100%, 55%);
+  font-size: 15px;
+  margin-left: 1rem;
 }/*# sourceMappingURL=style.css.map */

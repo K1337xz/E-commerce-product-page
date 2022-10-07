@@ -1,6 +1,7 @@
 @use "../abstracts/colors" as *;
 .gallery {
 	width: 55%;
+	height: 70vh;
 	.thumbnails {
 		display: flex;
 		align-items: center;

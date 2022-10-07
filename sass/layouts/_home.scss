@@ -1,0 +1,55 @@
+@use "../abstracts/colors" as *;
+body {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 75%;
+	height: 100%;
+	margin-top: 3rem;
+}
+.rightContent {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-left: 8rem;
+	height: 75vh;
+	h1 {
+		color: $orange;
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+	h2 {
+		width: 50%;
+		font-size: 50px;
+	}
+	p {
+		color: $dark-grayish-blue;
+		text-align: left;
+		margin-right: 5rem;
+	}
+}
+.pricewrapper {
+	.pricedisc {
+		display: flex;
+		align-items: center;
+	}
+	p {
+		color: $black;
+	}
+	.discount {
+		width: 30%;
+		height: 30%;
+		background-color: $pale-orange;
+		color: $orange;
+		font-size: 15px;
+		margin-left: 1rem;
+	}
+}
