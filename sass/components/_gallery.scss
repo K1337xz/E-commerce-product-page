@@ -1,0 +1,40 @@
+@use "../abstracts/colors" as *;
+.gallery {
+	width: 55%;
+	.thumbnails {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		gap: 1rem;
+		margin-top: 5rem;
+		.thumbnailwraper {
+			height: 10%;
+			&:hover {
+				border: 3px solid $orange;
+				border-radius: 8%;
+			}
+			img {
+				width: 100%;
+				border-radius: 6%;
+				cursor: pointer;
+				&:hover {
+					filter: opacity(0.5);
+				}
+			}
+		}
+	}
+}
+.maingalleryItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 2;
+	margin-bottom: 1rem;
+
+	img {
+		width: 70%;
+		cursor: pointer;
+		border-radius: 6%;
+	}
+}

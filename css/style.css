@@ -7,8 +7,9 @@ header {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
-  width: 100%;
-  height: 20vh;
+  width: 80%;
+  height: 15vh;
+  border-bottom: 1px solid hsl(223deg, 64%, 98%);
 }
 header .navMenu {
   display: none;
@@ -26,16 +27,26 @@ header .navMenu {
   cursor: pointer;
 }
 .navContainer li {
+  display: flex;
+  align-items: center;
   list-style: none;
+  height: 15vh;
+}
+.navContainer li:hover {
+  border-bottom: 3px solid hsl(26deg, 100%, 55%);
+  z-index: 1;
 }
 .navContainer a {
   padding: 1rem;
   text-decoration: none;
-  color: black;
+  color: hsl(219deg, 9%, 45%);
+}
+.navContainer a:hover {
+  color: hsl(220deg, 13%, 13%);
 }
 
 .rightMenu {
-  width: 10%;
+  width: 20%;
 }
 .rightMenu .shopcart {
   display: flex;
@@ -45,10 +56,107 @@ header .navMenu {
 .rightMenu .shopcart a img {
   width: 50px;
 }
+.rightMenu .shopcart a img:hover {
+  border: 3px solid hsl(26deg, 100%, 55%);
+  border-radius: 50%;
+}
 .rightMenu .shopcart .dropdowncart {
   cursor: pointer;
+}
+.rightMenu .shopcartNumber {
+  position: relative;
+  left: 10px;
+  top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 15px;
+  background-color: hsl(26deg, 100%, 55%);
+  border-radius: 40%;
+  margin-right: -4rem;
+  margin-top: -1rem;
+  z-index: 1;
+}
+.rightMenu .shopcartNumber sub {
+  color: hsl(0deg, 0%, 100%);
 }
 
 .dropdown {
   display: none;
+}
+
+.gallery {
+  width: 55%;
+}
+.gallery .thumbnails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+.gallery .thumbnails .thumbnailwraper {
+  height: 10%;
+}
+.gallery .thumbnails .thumbnailwraper:hover {
+  border: 3px solid hsl(26deg, 100%, 55%);
+  border-radius: 8%;
+}
+.gallery .thumbnails .thumbnailwraper img {
+  width: 100%;
+  border-radius: 6%;
+  cursor: pointer;
+}
+.gallery .thumbnails .thumbnailwraper img:hover {
+  filter: opacity(0.5);
+}
+
+.maingalleryItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  margin-bottom: 1rem;
+}
+.maingalleryItem img {
+  width: 70%;
+  cursor: pointer;
+  border-radius: 6%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.rightContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 8rem;
+  height: 75vh;
+}
+.rightContent h1 {
+  color: hsl(26deg, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.rightContent h2 {
+  width: 50%;
+  font-size: 50px;
 }/*# sourceMappingURL=style.css.map */

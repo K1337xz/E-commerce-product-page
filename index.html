@@ -42,12 +42,14 @@
 			</div>
 			<div class="rightMenu">
 				<div class="shopcart">
-					<span class="shopcartNumber"></span>
-					<img
-						src="images/icon-cart.svg"
-						alt="shopcart icon"
-						class="dropdowncart"
-					/>
+					<div class="countincart">
+						<span class="shopcartNumber"><sub>1</sub></span>
+						<img
+							src="images/icon-cart.svg"
+							alt="shopcart icon"
+							class="dropdowncart"
+						/>
+					</div>
 					<a href="#"
 						><img
 							src="images/image-avatar.png"
@@ -97,26 +99,34 @@
 					<span class="rightArrow"></span>
 				</div>
 				<div class="thumbnails">
-					<img
-						src="images/image-product-1-thumbnail.jpg"
-						alt="image-product-1-thumbnail"
-						class="fistImg thumbnail"
-					/>
-					<img
-						src="images/image-product-2-thumbnail.jpg"
-						alt="image-product-2-thumbnail"
-						class="secondImg thumbnail"
-					/>
-					<img
-						src="images/image-product-3-thumbnail.jpg"
-						alt="image-product-3-thumbnail"
-						class="thirdImg thumbnail"
-					/>
-					<img
-						src="images/image-product-4-thumbnail.jpg"
-						alt="image-product-4-thumbnail"
-						class="fourthImg"
-					/>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-1-thumbnail.jpg"
+							alt="image-product-1-thumbnail"
+							class="fistImg thumbnail"
+						/>
+					</div>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-2-thumbnail.jpg"
+							alt="image-product-2-thumbnail"
+							class="secondImg thumbnail"
+						/>
+					</div>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-3-thumbnail.jpg"
+							alt="image-product-3-thumbnail"
+							class="thirdImg thumbnail"
+						/>
+					</div>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-4-thumbnail.jpg"
+							alt="image-product-4-thumbnail"
+							class="fourthImg"
+						/>
+					</div>
 				</div>
 			</div>
 			<div class="gallery-fullscren">
@@ -153,17 +163,19 @@
 				</div>
 			</div>
 			<div class="rightContent">
-				<p>Sneaker Company</p>
-				<h1>Fall Limited Edition Sneakers</h1>
+				<h1>Sneaker Company</h1>
+				<h2>Fall Limited Edition Sneakers</h2>
 				<p>
 					These low-profile sneakers are your perfect casual wear
 					companion. Featuring a durable rubber outer sole, they’ll
 					withstand everything the weather can offer.
 				</p>
-				<p>
-					$125.00 <span class="discount"><sub>50%</sub></span>
-				</p>
-				<sub>$250</sub>
+				<div class="pricewrapper">
+					<p>
+						$125.00 <span class="discount"><sub>50%</sub></span>
+					</p>
+					<sub>$250</sub>
+				</div>
 				<div class="addtocartSection">
 					<form action="get" class="toCart">
 						<label for="amountCart">
@@ -186,18 +198,15 @@
 				</div>
 			</div>
 		</main>
-		Collections Men Women About Contact Sneaker Company Fall Limited Edition
-		Sneakers These low-profile sneakers are your perfect casual wear
-		companion. Featuring a durable rubber outer sole, they’ll withstand
-		everything the weather can offer. $125.00 50% $250.00 0 Add to cart
-
-		<div class="attribution">
-			Challenge by
-			<a
-				href="https://www.frontendmentor.io?ref=challenge"
-				target="_blank"
-				>Frontend Mentor</a
-			>. Coded by <a href="#">Your Name Here</a>.
-		</div>
+		<footer>
+			<div class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Your Name Here</a>.
+			</div>
+		</footer>
 	</body>
 </html>
