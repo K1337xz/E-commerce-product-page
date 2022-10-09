@@ -1,8 +1,61 @@
+@use "../abstracts/colors" as *;
 input[type="number"] {
 	-moz-appearance: textfield;
+	width: 10%;
+	height: 4.8vh;
+	background-color: $light-grayish-blue;
+	font-size: 16px;
+	text-align: center;
+	outline: none;
+	border: none;
+}
+#decrement {
+	width: 5%;
+	height: 5vh;
+	margin-right: -1rem;
+	background-color: $light-grayish-blue;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: $orange;
+	font-size: 16px;
+}
+#incetment {
+	width: 5%;
+	height: 5vh;
+	margin-left: -1rem;
+	background-color: $light-grayish-blue;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: $orange;
+	font-size: 16px;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
+}
+.buttonCart {
+	width: 40%;
+	height: 5vh;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	background-color: $orange;
+	color: $white;
+	cursor: pointer;
+	background-image: url(/images/icon-cart.svg);
+	background-repeat: no-repeat;
+	background-position: 30% 50%;
+	margin-left: 2rem;
+	-webkit-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
+	-moz-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
+	box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
+	&:hover {
+		opacity: 0.5;
+		-webkit-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+		-moz-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+		box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+	}
 }

@@ -1,3 +1,97 @@
+@use "../abstracts/colors" as *;
 .gallery-fullscren {
-	display: none;
+	position: absolute;
+	top: 10%;
+	width: 55%;
+	height: 70vh;
+	.thumbnails {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+		gap: 1rem;
+		margin-top: 3rem;
+		z-index: 999;
+		.thumbnailwraper {
+			height: 10%;
+			width: 10%;
+			&:hover {
+				border: 3px solid $orange;
+				border-radius: 8%;
+			}
+			img {
+				width: 100%;
+				border-radius: 6%;
+				cursor: pointer;
+				&:hover {
+					filter: brightness(200%) contrast(200%);
+					-webkit-filter: brightness(200%) contrast(200%);
+				}
+			}
+		}
+	}
+	.maingalleryItem {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 2;
+		margin-bottom: 1rem;
+
+		img {
+			width: 55%;
+			cursor: pointer;
+			border-radius: 6%;
+		}
+	}
+	.leftArrow {
+		display: block;
+		background-image: url(/images/icon-previous.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		margin-right: -1.5rem;
+		z-index: 1;
+		cursor: pointer;
+	}
+	.rightArrow {
+		display: block;
+		background-image: url(/images/icon-next.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		margin-left: -1.5rem;
+		z-index: 1;
+		cursor: pointer;
+	}
+	.closeGallery {
+		position: relative;
+		left: 80%;
+		display: block;
+		background-image: url(/images/icon-close.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		margin-left: -1.5rem;
+		z-index: 1;
+		cursor: pointer;
+	}
+}
+.enableBlur > * {
+	filter: blur(4px);
+}
+
+.disableBlur {
+	filter: blur(0);
+}
+.blurwithz {
+	z-index: -1;
 }

@@ -26,7 +26,7 @@
 		</style>
 	</head>
 	<body>
-		<header>
+		<header class="enableBlur">
 			<img src="images/icon-menu.svg" alt="icon-menu" class="navMenu" />
 			<img src="images/logo.svg" alt="logo-image" />
 			<div class="nav-left">
@@ -45,7 +45,7 @@
 					<div class="countincart">
 						<span class="shopcartNumber"><sub>1</sub></span>
 						<img
-							src="images/icon-cart.svg"
+							src="images/icon-cart-black.svg"
 							alt="shopcart icon"
 							class="dropdowncart"
 						/>
@@ -87,7 +87,7 @@
 				</div>
 			</div>
 		</header>
-		<main class="container">
+		<main class="container enableBlur">
 			<div class="gallery">
 				<div class="maingalleryItem">
 					<span class="leftArrow"></span>
@@ -129,7 +129,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="gallery-fullscren">
+			<div class="gallery-fullscren disableBlur">
+				<span class="closeGallery"></span>
 				<div class="maingalleryItem">
 					<span class="leftArrow"></span>
 					<img
@@ -140,29 +141,37 @@
 					<span class="rightArrow"></span>
 				</div>
 				<div class="thumbnails">
-					<img
-						src="images/image-product-1-thumbnail.jpg"
-						alt="image-product-1-thumbnail"
-						class="fistImg thumbnail"
-					/>
-					<img
-						src="images/image-product-2-thumbnail.jpg"
-						alt="image-product-2-thumbnail"
-						class="secondImg thumbnail"
-					/>
-					<img
-						src="images/image-product-3-thumbnail.jpg"
-						alt="image-product-3-thumbnail"
-						class="thirdImg thumbnail"
-					/>
-					<img
-						src="images/image-product-4-thumbnail.jpg"
-						alt="image-product-4-thumbnail"
-						class="fourthImg"
-					/>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-1-thumbnail.jpg"
+							alt="image-product-1-thumbnail"
+							class="fistImg thumbnail"
+						/>
+					</div>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-2-thumbnail.jpg"
+							alt="image-product-2-thumbnail"
+							class="secondImg thumbnail"
+						/>
+					</div>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-3-thumbnail.jpg"
+							alt="image-product-3-thumbnail"
+							class="thirdImg thumbnail"
+						/>
+					</div>
+					<div class="thumbnailwraper">
+						<img
+							src="images/image-product-4-thumbnail.jpg"
+							alt="image-product-4-thumbnail"
+							class="fourthImg"
+						/>
+					</div>
 				</div>
 			</div>
-			<div class="rightContent">
+			<div class="rightContent blurwithz">
 				<h1>Sneaker Company</h1>
 				<h2>Fall Limited Edition Sneakers</h2>
 				<p>
@@ -177,7 +186,9 @@
 							<span class="discount">50%</span>
 						</div>
 					</div>
-					<sub class="orginalprice">$250</sub>
+					<div class="orginal">
+						<sub class="orginalprice">$250</sub>
+					</div>
 				</div>
 				<div class="addtocartSection">
 					<form action="#" class="toCart">
@@ -191,8 +202,8 @@
 							/>
 							<button id="incetment">+</button>
 						</label>
+						<span class="cartIcon"></span>
 						<label for="button">
-							<span class="cartIcon"></span>
 							<input
 								type="submit"
 								value="Add to cart"
