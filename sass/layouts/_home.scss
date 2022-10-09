@@ -44,12 +44,19 @@ body {
 	p {
 		color: $black;
 	}
-	.discount {
-		width: 30%;
-		height: 30%;
+	.discountwrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 7%;
+		height: 25px;
 		background-color: $pale-orange;
 		color: $orange;
 		font-size: 15px;
-		margin-left: 1rem;
+		margin-left: -4rem;
+		border-radius: 20%;
 	}
+}
+.orginalprice {
+	margin-top: -1rem;
 }

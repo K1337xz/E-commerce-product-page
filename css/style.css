@@ -174,11 +174,28 @@ body {
 .pricewrapper p {
   color: hsl(0deg, 0%, 0%);
 }
-.pricewrapper .discount {
-  width: 30%;
-  height: 30%;
+.pricewrapper .discountwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7%;
+  height: 25px;
   background-color: hsl(25deg, 100%, 94%);
   color: hsl(26deg, 100%, 55%);
   font-size: 15px;
-  margin-left: 1rem;
+  margin-left: -4rem;
+  border-radius: 20%;
+}
+
+.orginalprice {
+  margin-top: -1rem;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }/*# sourceMappingURL=style.css.map */
