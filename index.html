@@ -26,7 +26,7 @@
 		</style>
 	</head>
 	<body>
-		<header class="enableBlur">
+		<header>
 			<img src="images/icon-menu.svg" alt="icon-menu" class="navMenu" />
 			<img src="images/logo.svg" alt="logo-image" />
 			<div class="nav-left">
@@ -57,37 +57,40 @@
 					/></a>
 				</div>
 				<div class="dropdown">
-					<div class="iteminCart">
-						<img
-							src="images/image-product-1-thumbnail.jpg"
-							alt="image-product-1-thumbnail"
-						/>
-					</div>
 					<div class="profile">
-						<p>Cart</p>
+						<div class="toptext">
+							<p>Cart</p>
+							<hr />
+						</div>
 						<div class="selecteditemimage">
+							<div class="iteminCart"></div>
 							<div class="nameofproduct">
-								<p>Fall Limited Edition Sneakers</p>
+								<p></p>
 								<br />
 								<p>
-									$125.00 x 0 <span class="price">$555</span>
+									<span class="price"></span>
 								</p>
+							</div>
+							<div class="deleteItems">
 								<img
 									src="images/icon-delete.svg"
 									alt="deleteicon"
 								/>
 							</div>
-							<div class="checkout">
-								<button type="submit" class="checkout button">
-									Checkout
-								</button>
-							</div>
+						</div>
+						<div class="empty">
+							<p>Your cart is empty</p>
+						</div>
+						<div class="checkout">
+							<button type="submit" class="checkoutBtn">
+								Checkout
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</header>
-		<main class="container enableBlur">
+		<main class="container">
 			<div class="gallery">
 				<div class="maingalleryItem">
 					<span class="leftArrow"></span>
@@ -129,7 +132,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="gallery-fullscren disableBlur">
+			<div class="gallery-fullscren">
 				<span class="closeGallery"></span>
 				<div class="maingalleryItem">
 					<span class="leftArrow"></span>
@@ -171,7 +174,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="rightContent blurwithz">
+			<div class="rightContent">
 				<h1>Sneaker Company</h1>
 				<h2>Fall Limited Edition Sneakers</h2>
 				<p>
@@ -193,14 +196,14 @@
 				<div class="addtocartSection">
 					<form action="#" class="toCart">
 						<label for="amountCart">
-							<button id="decrement">-</button>
+							<button id="decrement"></button>
 							<input
 								type="number"
 								name="amountCart"
 								id="amountCart"
 								min="0"
 							/>
-							<button id="incetment">+</button>
+							<button id="incetment"></button>
 						</label>
 						<span class="cartIcon"></span>
 						<label for="button">

@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as *;
 .gallery-fullscren {
+	display: none;
 	position: absolute;
 	top: 10%;
 	width: 55%;

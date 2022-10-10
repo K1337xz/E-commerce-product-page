@@ -1,3 +1,73 @@
+@use "../abstracts/colors" as *;
+
 .dropdown {
 	display: none;
+	position: absolute;
+	top: 15%;
+	width: 20%;
+	height: 30%;
+	border-radius: 20px;
+	-webkit-box-shadow: 8px 8px 48px 0px rgba(33, 33, 33, 1);
+	-moz-box-shadow: 8px 8px 48px 0px rgba(33, 33, 33, 1);
+	box-shadow: 8px 8px 48px 0px rgba(33, 33, 33, 1);
+	z-index: 111;
+	.profile {
+		width: 100%;
+	}
+	.selecteditemimage {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-content: center;
+		width: 100%;
+	}
+}
+.iteminCart {
+	margin-top: 1rem;
+	img {
+		width: 30%;
+		border-radius: 5px;
+	}
+}
+.nameofproduct {
+	margin-left: -6rem;
+	font-size: 18px;
+	p {
+		margin-bottom: -2rem;
+		color: $dark-grayish-blue;
+	}
+	.price {
+		color: $black;
+		font-weight: bold;
+	}
+}
+.deleteItems {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	margin-left: 2rem;
+	cursor: pointer;
+}
+.toptext {
+	width: 100%;
+	hr {
+		border-top: 1px solid $light-grayish-blue;
+	}
+	p {
+		margin-top: 1rem;
+		margin-left: 2rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+}
+.empty {
+	width: 100%;
+	height: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	p {
+		color: $dark-grayish-blue;
+	}
 }

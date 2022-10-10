@@ -1,14 +1,14 @@
 @use "../abstracts/colors" as *;
 .gallery {
 	width: 55%;
-	height: 70vh;
+	height: 75vh;
 	.thumbnails {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: row;
 		gap: 1rem;
-		margin-top: 5rem;
+		margin-top: 2rem;
 		.thumbnailwraper {
 			height: 10%;
 			&:hover {
@@ -34,7 +34,7 @@
 	margin-bottom: 1rem;
 
 	img {
-		width: 70%;
+		width: 95%;
 		cursor: pointer;
 		border-radius: 6%;
 	}

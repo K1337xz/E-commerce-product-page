@@ -1,8 +1,8 @@
 @use "../abstracts/colors" as *;
 input[type="number"] {
 	-moz-appearance: textfield;
-	width: 10%;
-	height: 4.8vh;
+	width: 15%;
+	height: 8vh;
 	background-color: $light-grayish-blue;
 	font-size: 16px;
 	text-align: center;
@@ -11,25 +11,35 @@ input[type="number"] {
 }
 #decrement {
 	width: 5%;
-	height: 5vh;
+	height: 8vh;
 	margin-right: -1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	background-color: $light-grayish-blue;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	color: $orange;
 	font-size: 16px;
+	background-image: url(/images/icon-minus.svg);
+	background-repeat: no-repeat;
+	background-position: 50%;
 }
 #incetment {
 	width: 5%;
-	height: 5vh;
+	height: 8vh;
 	margin-left: -1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 	background-color: $light-grayish-blue;
 	outline: none;
 	border: none;
 	cursor: pointer;
 	color: $orange;
 	font-size: 16px;
+	background-image: url(/images/icon-plus.svg);
+	background-repeat: no-repeat;
+	background-position: 50%;
 }
 
 input::-webkit-outer-spin-button,
@@ -38,13 +48,14 @@ input::-webkit-inner-spin-button {
 }
 .buttonCart {
 	width: 40%;
-	height: 5vh;
+	height: 8vh;
 	border-radius: 10px;
 	border: none;
 	outline: none;
 	background-color: $orange;
 	color: $white;
 	cursor: pointer;
+	font-weight: 700;
 	background-image: url(/images/icon-cart.svg);
 	background-repeat: no-repeat;
 	background-position: 30% 50%;
@@ -57,5 +68,23 @@ input::-webkit-inner-spin-button {
 		-webkit-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
 		-moz-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
 		box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+	}
+}
+.checkout {
+	width: 95%;
+	height: 45%;
+	margin-left: 0.5rem;
+	margin-top: 1rem;
+	display: none;
+	.checkoutBtn {
+		margin-left: 0.5rem;
+		width: 95%;
+		height: 45%;
+		background-color: $orange;
+		color: $white;
+		border-radius: 10px;
+		border: none;
+		outline: none;
+		cursor: pointer;
 	}
 }
