@@ -93,41 +93,40 @@
 		<main class="container">
 			<div class="gallery">
 				<div class="maingalleryItem">
-					<span class="leftArrow"></span>
 					<img
 						src="images/image-product-1.jpg"
 						alt="image-product-1"
-						class="fistImg"
+						id="firstImg"
 					/>
-					<span class="rightArrow"></span>
 				</div>
 				<div class="thumbnails">
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-1-thumbnail.jpg"
 							alt="image-product-1-thumbnail"
-							class="fistImg thumbnail"
+							id="fistImgThumbnail"
+							class="active"
 						/>
 					</div>
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-2-thumbnail.jpg"
 							alt="image-product-2-thumbnail"
-							class="secondImg thumbnail"
+							id="secondImgThumbnail "
 						/>
 					</div>
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-3-thumbnail.jpg"
 							alt="image-product-3-thumbnail"
-							class="thirdImg thumbnail"
+							id="thirdImgThumbnail "
 						/>
 					</div>
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-4-thumbnail.jpg"
 							alt="image-product-4-thumbnail"
-							class="fourthImg"
+							id="fourthImgThumbnail"
 						/>
 					</div>
 				</div>
@@ -139,37 +138,37 @@
 					<img
 						src="images/image-product-1.jpg"
 						alt="image-product-1"
-						class="fistImg"
+						id="fistImgFullscreen"
 					/>
 					<span class="rightArrow"></span>
 				</div>
-				<div class="thumbnails">
+				<div class="thumbnailsFull">
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-1-thumbnail.jpg"
 							alt="image-product-1-thumbnail"
-							class="fistImg thumbnail"
+							id="fistImgThumbnail"
 						/>
 					</div>
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-2-thumbnail.jpg"
 							alt="image-product-2-thumbnail"
-							class="secondImg thumbnail"
+							id="secondImgThumbnail "
 						/>
 					</div>
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-3-thumbnail.jpg"
 							alt="image-product-3-thumbnail"
-							class="thirdImg thumbnail"
+							id="thirdImgThumbnail"
 						/>
 					</div>
 					<div class="thumbnailwraper">
 						<img
 							src="images/image-product-4-thumbnail.jpg"
 							alt="image-product-4-thumbnail"
-							class="fourthImg"
+							id="fourthImgThumbnail"
 						/>
 					</div>
 				</div>
@@ -184,10 +183,7 @@
 				</p>
 				<div class="pricewrapper">
 					<div class="pricedisc">
-						<p>$125.00</p>
-						<div class="discountwrapper">
-							<span class="discount">50%</span>
-						</div>
+						<p>$125.00 <span class="discount">50%</span></p>
 					</div>
 					<div class="orginal">
 						<sub class="orginalprice">$250</sub>
@@ -202,8 +198,9 @@
 								name="amountCart"
 								id="amountCart"
 								min="0"
+								value="0"
 							/>
-							<button id="incetment"></button>
+							<button id="increment"></button>
 						</label>
 						<span class="cartIcon"></span>
 						<label for="button">
@@ -227,5 +224,6 @@
 				>. Coded by <a href="#">Your Name Here</a>.
 			</div>
 		</footer>
+		<script src="script.js"></script>
 	</body>
 </html>

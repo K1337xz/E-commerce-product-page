@@ -1,32 +1,31 @@
 @use "../abstracts/colors" as *;
 .gallery-fullscren {
 	display: none;
-	position: absolute;
-	top: 10%;
-	width: 55%;
-	height: 70vh;
-	.thumbnails {
+	position: fixed;
+	top: 0%;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.9);
+	z-index: 999;
+	.thumbnailsFull {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: row;
-		gap: 1rem;
 		margin-top: 3rem;
+		margin-left: 6rem;
 		z-index: 999;
 		.thumbnailwraper {
-			height: 10%;
+			height: 2%;
 			width: 10%;
-			&:hover {
-				border: 3px solid $orange;
-				border-radius: 8%;
-			}
 			img {
-				width: 100%;
+				width: 55%;
 				border-radius: 6%;
 				cursor: pointer;
 				&:hover {
-					filter: brightness(200%) contrast(200%);
-					-webkit-filter: brightness(200%) contrast(200%);
+					filter: opacity(0.5);
+					border: 3px solid $orange;
+					border-radius: 8%;
 				}
 			}
 		}
@@ -39,7 +38,7 @@
 		margin-bottom: 1rem;
 
 		img {
-			width: 55%;
+			width: 35%;
 			cursor: pointer;
 			border-radius: 6%;
 		}
@@ -72,12 +71,11 @@
 	}
 	.closeGallery {
 		position: relative;
-		left: 80%;
+		left: 70%;
 		display: block;
 		background-image: url(/images/icon-close.svg);
 		background-repeat: no-repeat;
 		background-position: center;
-		background-color: $white;
 		border-radius: 50%;
 		width: 50px;
 		height: 50px;

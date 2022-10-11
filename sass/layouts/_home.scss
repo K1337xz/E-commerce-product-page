@@ -21,6 +21,7 @@ body {
 	flex-direction: column;
 	margin-left: 8rem;
 	height: 75vh;
+	flex: 2;
 	h1 {
 		color: $orange;
 		text-transform: uppercase;
@@ -29,15 +30,15 @@ body {
 		font-weight: 700;
 	}
 	h2 {
-		width: 50%;
+		width: 90%;
 		font-size: 50px;
 	}
 	p {
 		color: $dark-grayish-blue;
 		text-align: left;
 		margin-right: 5rem;
-		margin-top: 5rem;
-		width: 55%;
+		margin-top: 4rem;
+		width: 85%;
 	}
 }
 .pricewrapper {
@@ -51,18 +52,12 @@ body {
 		font-weight: 700;
 		font-size: 26px;
 	}
-	.discountwrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 7%;
-		height: 25px;
+	.discount {
 		background-color: $pale-orange;
 		color: $orange;
+		font-weight: 400;
+		border-radius: 4px;
 		font-size: 15px;
-		margin-left: -26rem;
-		border-radius: 20%;
-		margin-top: 5rem;
 	}
 }
 .orginal {

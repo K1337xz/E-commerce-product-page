@@ -1,36 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@400;700&family=Josefin+Sans:wght@300&family=Kumbh+Sans:wght@400;700&display=swap");
 .gallery-fullscren {
   display: none;
-  position: absolute;
-  top: 10%;
-  width: 55%;
-  height: 70vh;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
 }
-.gallery-fullscren .thumbnails {
+.gallery-fullscren .thumbnailsFull {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 1rem;
   margin-top: 3rem;
+  margin-left: 6rem;
   z-index: 999;
 }
-.gallery-fullscren .thumbnails .thumbnailwraper {
-  height: 10%;
+.gallery-fullscren .thumbnailsFull .thumbnailwraper {
+  height: 2%;
   width: 10%;
 }
-.gallery-fullscren .thumbnails .thumbnailwraper:hover {
-  border: 3px solid hsl(26deg, 100%, 55%);
-  border-radius: 8%;
-}
-.gallery-fullscren .thumbnails .thumbnailwraper img {
-  width: 100%;
+.gallery-fullscren .thumbnailsFull .thumbnailwraper img {
+  width: 55%;
   border-radius: 6%;
   cursor: pointer;
 }
-.gallery-fullscren .thumbnails .thumbnailwraper img:hover {
-  filter: brightness(200%) contrast(200%);
-  -webkit-filter: brightness(200%) contrast(200%);
+.gallery-fullscren .thumbnailsFull .thumbnailwraper img:hover {
+  filter: opacity(0.5);
+  border: 3px solid hsl(26deg, 100%, 55%);
+  border-radius: 8%;
 }
 .gallery-fullscren .maingalleryItem {
   display: flex;
@@ -40,7 +39,7 @@
   margin-bottom: 1rem;
 }
 .gallery-fullscren .maingalleryItem img {
-  width: 55%;
+  width: 35%;
   cursor: pointer;
   border-radius: 6%;
 }
@@ -72,12 +71,11 @@
 }
 .gallery-fullscren .closeGallery {
   position: relative;
-  left: 80%;
+  left: 70%;
   display: block;
   background-image: url(/images/icon-close.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: hsl(0deg, 0%, 100%);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -262,23 +260,22 @@ header .navMenu {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 1rem;
   margin-top: 2rem;
+  margin-left: 7rem;
 }
 .gallery .thumbnails .thumbnailwraper {
   height: 10%;
 }
-.gallery .thumbnails .thumbnailwraper:hover {
-  border: 3px solid hsl(26deg, 100%, 55%);
-  border-radius: 8%;
-}
 .gallery .thumbnails .thumbnailwraper img {
-  width: 100%;
+  width: 65%;
   border-radius: 6%;
+  margin-left: -2rem;
   cursor: pointer;
 }
 .gallery .thumbnails .thumbnailwraper img:hover {
   filter: opacity(0.5);
+  border: 3px solid hsl(26deg, 100%, 55%);
+  border-radius: 8%;
 }
 
 .maingalleryItem {
@@ -289,9 +286,15 @@ header .navMenu {
   margin-bottom: 1rem;
 }
 .maingalleryItem img {
-  width: 95%;
+  width: 65%;
   cursor: pointer;
   border-radius: 6%;
+}
+
+.active {
+  filter: opacity(0.5);
+  border: 3px solid hsl(26deg, 100%, 55%);
+  border-radius: 8%;
 }
 
 body {
@@ -318,6 +321,7 @@ body {
   flex-direction: column;
   margin-left: 8rem;
   height: 75vh;
+  flex: 2;
 }
 .rightContent h1 {
   color: hsl(26deg, 100%, 55%);
@@ -327,15 +331,15 @@ body {
   font-weight: 700;
 }
 .rightContent h2 {
-  width: 50%;
+  width: 90%;
   font-size: 50px;
 }
 .rightContent p {
   color: hsl(219deg, 9%, 45%);
   text-align: left;
   margin-right: 5rem;
-  margin-top: 5rem;
-  width: 55%;
+  margin-top: 4rem;
+  width: 85%;
 }
 
 .pricewrapper .pricedisc {
@@ -348,18 +352,12 @@ body {
   font-weight: 700;
   font-size: 26px;
 }
-.pricewrapper .discountwrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 7%;
-  height: 25px;
+.pricewrapper .discount {
   background-color: hsl(25deg, 100%, 94%);
   color: hsl(26deg, 100%, 55%);
+  font-weight: 400;
+  border-radius: 4px;
   font-size: 15px;
-  margin-left: -26rem;
-  border-radius: 20%;
-  margin-top: 5rem;
 }
 
 .orginal {
@@ -375,17 +373,18 @@ body {
 
 input[type=number] {
   -moz-appearance: textfield;
-  width: 15%;
+  width: 22%;
   height: 8vh;
   background-color: hsl(223deg, 64%, 98%);
   font-size: 16px;
   text-align: center;
   outline: none;
   border: none;
+  font-weight: 700;
 }
 
 #decrement {
-  width: 5%;
+  width: 8%;
   height: 8vh;
   margin-right: -1rem;
   padding-top: 2rem;
@@ -401,8 +400,8 @@ input[type=number] {
   background-position: 50%;
 }
 
-#incetment {
-  width: 5%;
+#increment {
+  width: 8%;
   height: 8vh;
   margin-left: -1rem;
   padding-top: 2rem;
@@ -424,7 +423,7 @@ input::-webkit-inner-spin-button {
 }
 
 .buttonCart {
-  width: 40%;
+  width: 45%;
   height: 8vh;
   border-radius: 10px;
   border: none;
@@ -435,7 +434,7 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   background-image: url(/images/icon-cart.svg);
   background-repeat: no-repeat;
-  background-position: 30% 50%;
+  background-position: 23% 50%;
   margin-left: 2rem;
   box-shadow: 8px 57px 85px -33px rgb(255, 140, 26);
 }

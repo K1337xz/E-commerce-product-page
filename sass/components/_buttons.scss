@@ -1,16 +1,17 @@
 @use "../abstracts/colors" as *;
 input[type="number"] {
 	-moz-appearance: textfield;
-	width: 15%;
+	width: 22%;
 	height: 8vh;
 	background-color: $light-grayish-blue;
 	font-size: 16px;
 	text-align: center;
 	outline: none;
 	border: none;
+	font-weight: 700;
 }
 #decrement {
-	width: 5%;
+	width: 8%;
 	height: 8vh;
 	margin-right: -1rem;
 	padding-top: 2rem;
@@ -25,8 +26,8 @@ input[type="number"] {
 	background-repeat: no-repeat;
 	background-position: 50%;
 }
-#incetment {
-	width: 5%;
+#increment {
+	width: 8%;
 	height: 8vh;
 	margin-left: -1rem;
 	padding-top: 2rem;
@@ -47,7 +48,7 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 .buttonCart {
-	width: 40%;
+	width: 45%;
 	height: 8vh;
 	border-radius: 10px;
 	border: none;
@@ -58,7 +59,7 @@ input::-webkit-inner-spin-button {
 	font-weight: 700;
 	background-image: url(/images/icon-cart.svg);
 	background-repeat: no-repeat;
-	background-position: 30% 50%;
+	background-position: 23% 50%;
 	margin-left: 2rem;
 	-webkit-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
 	-moz-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
