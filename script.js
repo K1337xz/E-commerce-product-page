@@ -39,6 +39,10 @@ for (let z = 0; z < thumbnailItemsFull.length; z++) {
 		mainimageGalleryFull.src = `${src}`;
 	});
 }
+mainimageGallery.addEventListener("click", () => {
+	openFull.style.display = `block`;
+	mainimageGalleryFull.src = mainimageGallery.src;
+});
 //arrow change image
 const leftTrigger = document.querySelector(".leftArrow");
 const rightTrigger = document.querySelector(".rightArrow");
@@ -60,9 +64,7 @@ leftTrigger.addEventListener("click", () => {
 	}
 	mainimageGalleryFull.src = `images/image-product-${click}.jpg`;
 });
-mainimageGallery.addEventListener("click", () => {
-	openFull.style.display = `block`;
-});
+
 closeFullscreen.addEventListener("click", () => {
 	openFull.style.display = `none`;
 });
