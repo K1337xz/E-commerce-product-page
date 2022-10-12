@@ -41,6 +41,7 @@ for (let z = 0; z < thumbnailItemsFull.length; z++) {
 }
 mainimageGallery.addEventListener("click", () => {
 	openFull.style.display = `block`;
+	openFull.style.left = `0`;
 	mainimageGalleryFull.src = mainimageGallery.src;
 });
 //arrow change image
@@ -67,4 +68,61 @@ leftTrigger.addEventListener("click", () => {
 
 closeFullscreen.addEventListener("click", () => {
 	openFull.style.display = `none`;
+});
+//open shop cart
+
+const cartToggle = document.querySelector(".dropdowncart");
+const dropDown = document.querySelector(".dropdown");
+cartToggle.addEventListener("click", () => {
+	if (dropDown.classList.contains("show")) {
+		dropDown.classList.remove("show");
+		dropDown.style.display = `none`;
+	} else {
+		dropDown.style.display = `flex`;
+		dropDown.classList.add("show");
+	}
+});
+
+//add to cart
+const addtoCartButton = document.querySelector(".buttonCart");
+const shopcart = document.querySelector(".shopcartNumber");
+const emptyCart = document.querySelector(".empty");
+const totalPrice = document.querySelector(".price");
+const valuecart = document.querySelector(".valueCart");
+const showItemcart = document.querySelector(".selecteditemimage");
+const checkoutWrapp = document.querySelector(".checkout");
+const chcekBtn = document.querySelector(".checkoutBtn");
+let shopcartValue = document.querySelector(".shopcartNumber sub");
+
+function addtoCart(e) {
+	if (valueofcartInput.value > 0) {
+		shopcart.style.display = `flex`;
+		showItemcart.style.display = `flex`;
+		emptyCart.style.display = `none`;
+		shopcartValue.innerHTML = `${valueofcartInput.value}`;
+		valuecart.innerHTML = `${valueofcartInput.value}`;
+		//total price
+		let totalCost = 125 * valueofcartInput.value;
+		totalPrice.innerHTML = `$${totalCost}.00`;
+		checkoutWrapp.style.display = `flex`;
+	} else {
+		alert("You need to have 1 item in cart");
+	}
+	e.preventDefault();
+}
+
+addtoCartButton.addEventListener("click", addtoCart);
+
+//delete items in cart
+const deleteItems = document.querySelector(".deleteItems");
+deleteItems.addEventListener("click", () => {
+	shopcart.style.display = `none`;
+	showItemcart.style.display = `none`;
+	checkoutWrapp.style.display = `none`;
+	emptyCart.style.display = `flex`;
+});
+
+//complite order
+chcekBtn.addEventListener("click", (e) => {
+	window.location.reload();
 });

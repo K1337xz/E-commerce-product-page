@@ -64,11 +64,22 @@ input::-webkit-inner-spin-button {
 	-webkit-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
 	-moz-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
 	box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
+	-webkit-transition: width 0.5s linear;
+	-moz-transition: width 0.5s linear;
+	-ms-transition: width 0.5s linear;
+	-o-transition: width 0.5s linear;
+	transition: width 0.5s linear;
 	&:hover {
 		opacity: 0.5;
+		width: 50%;
 		-webkit-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
 		-moz-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
 		box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+		-webkit-transition: width 0.5s linear;
+		-moz-transition: width 0.5s linear;
+		-ms-transition: width 0.5s linear;
+		-o-transition: width 0.5s linear;
+		transition: width 0.5s linear;
 	}
 }
 .checkout {

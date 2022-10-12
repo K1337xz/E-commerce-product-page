@@ -3,19 +3,19 @@
 .dropdown {
 	display: none;
 	position: absolute;
-	top: 15%;
-	width: 20%;
-	height: 30%;
+	top: 12%;
+	width: 18%;
+	height: 25%;
 	border-radius: 20px;
 	-webkit-box-shadow: 8px 8px 48px 0px rgba(33, 33, 33, 1);
 	-moz-box-shadow: 8px 8px 48px 0px rgba(33, 33, 33, 1);
 	box-shadow: 8px 8px 48px 0px rgba(33, 33, 33, 1);
-	z-index: 111;
+	background-color: $white;
 	.profile {
 		width: 100%;
 	}
 	.selecteditemimage {
-		display: flex;
+		display: none;
 		flex-direction: row;
 		justify-content: center;
 		align-content: center;
@@ -30,10 +30,11 @@
 	}
 }
 .nameofproduct {
-	margin-left: -6rem;
-	font-size: 18px;
+	margin-top: 1rem;
+	margin-left: -7rem;
+	font-size: 15px;
 	p {
-		margin-bottom: -2rem;
+		margin-bottom: -1rem;
 		color: $dark-grayish-blue;
 	}
 	.price {
@@ -42,7 +43,7 @@
 	}
 }
 .deleteItems {
-	display: none;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
@@ -55,6 +56,7 @@
 		border-top: 1px solid $light-grayish-blue;
 	}
 	p {
+		font-weight: 700;
 		margin-top: 1rem;
 		margin-left: 2rem;
 		font-weight: 700;
