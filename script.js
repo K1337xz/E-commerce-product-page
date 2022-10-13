@@ -35,6 +35,10 @@ const mainimageGalleryFull = document.querySelector("#fistImgFullscreen");
 const thumbnailItemsFull = document.querySelectorAll(".thumbnailsFull img");
 for (let z = 0; z < thumbnailItemsFull.length; z++) {
 	thumbnailItemsFull[z].addEventListener("click", () => {
+		for (let u = 0; u < thumbnailItemsFull.length; u++) {
+			thumbnailItemsFull[u].classList.remove("active");
+		}
+		thumbnailItemsFull[z].classList.add("active");
 		let src = thumbnailItemsFull[z].src.replace("-thumbnail", "");
 		mainimageGalleryFull.src = `${src}`;
 	});
@@ -43,7 +47,18 @@ mainimageGallery.addEventListener("click", () => {
 	openFull.style.display = `block`;
 	openFull.style.left = `0`;
 	mainimageGalleryFull.src = mainimageGallery.src;
+	let replaceFull = mainimageGalleryFull.src.replace(
+		".jpg",
+		"-thumbnail.jpg"
+	);
+	for (let c = 0; c < thumbnailItemsFull.length; c++) {
+		thumbnailItemsFull[c].classList.remove("active");
+		if (replaceFull === thumbnailItemsFull[c].src) {
+			thumbnailItemsFull[c].classList.add("active");
+		}
+	}
 });
+
 //arrow change image
 const leftTrigger = document.querySelector(".leftArrow");
 const rightTrigger = document.querySelector(".rightArrow");
@@ -57,6 +72,16 @@ rightTrigger.addEventListener("click", () => {
 		click = 1;
 	}
 	mainimageGalleryFull.src = `images/image-product-${click}.jpg`;
+	let replaceTriggersRight = mainimageGalleryFull.src.replace(
+		".jpg",
+		"-thumbnail.jpg"
+	);
+	for (let v = 0; v < thumbnailItemsFull.length; v++) {
+		thumbnailItemsFull[v].classList.remove("active");
+		if (replaceTriggersRight === thumbnailItemsFull[v].src) {
+			thumbnailItemsFull[v].classList.add("active");
+		}
+	}
 });
 leftTrigger.addEventListener("click", () => {
 	click--;
@@ -64,10 +89,28 @@ leftTrigger.addEventListener("click", () => {
 		click = 4;
 	}
 	mainimageGalleryFull.src = `images/image-product-${click}.jpg`;
+	let replaceTriggersRight = mainimageGalleryFull.src.replace(
+		".jpg",
+		"-thumbnail.jpg"
+	);
+	for (let b = 0; b < thumbnailItemsFull.length; b++) {
+		thumbnailItemsFull[b].classList.remove("active");
+		if (replaceTriggersRight === thumbnailItemsFull[b].src) {
+			thumbnailItemsFull[b].classList.add("active");
+		}
+	}
 });
+//close fullscreen
 
 closeFullscreen.addEventListener("click", () => {
 	openFull.style.display = `none`;
+});
+
+//close fullscreen by escape key
+window.addEventListener("keydown", (e) => {
+	if (e.key === `Escape`) {
+		openFull.style.display = `none`;
+	} else return;
 });
 //open shop cart
 
@@ -82,7 +125,15 @@ cartToggle.addEventListener("click", () => {
 		dropDown.classList.add("show");
 	}
 });
-
+//close shopcart
+const conta = document.querySelector(".container");
+conta.addEventListener("click", () => {
+	if (dropDown.classList.contains("show")) {
+		console.log("chuj");
+		dropDown.classList.remove("show");
+		dropDown.style.display = `none`;
+	} else return;
+});
 //add to cart
 const addtoCartButton = document.querySelector(".buttonCart");
 const shopcart = document.querySelector(".shopcartNumber");

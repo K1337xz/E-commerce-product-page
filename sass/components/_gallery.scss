@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as *;
+@use "../components/brakepoints" as *;
 .gallery {
 	width: 55%;
 	height: 75vh;
@@ -42,4 +43,71 @@
 	filter: opacity(0.5);
 	border: 3px solid $orange;
 	border-radius: 8%;
+}
+@include md {
+	.gallery {
+		width: 100%;
+		height: auto;
+		.thumbnails {
+			display: none;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			margin-top: 2rem;
+			margin-left: 7rem;
+			.thumbnailwraper {
+				height: 10%;
+				img {
+					width: 100%;
+					border-radius: 6%;
+					margin-left: -2rem;
+					cursor: pointer;
+					&:hover {
+						filter: opacity(0.5);
+						border: 3px solid $orange;
+						border-radius: 8%;
+					}
+				}
+			}
+		}
+	}
+	.maingalleryItem {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 2;
+		margin-bottom: 1rem;
+
+		img {
+			width: 100%;
+			cursor: pointer;
+			border-radius: 0%;
+		}
+	}
+	.arrowLeftMobile {
+		display: block;
+		background-image: url(/images/icon-previous.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		border-radius: 50%;
+		width: 35px;
+		height: 35px;
+		margin-right: -3.5rem;
+		z-index: 1;
+		cursor: pointer;
+	}
+	.arrowRightMobile {
+		display: block;
+		background-image: url(/images/icon-next.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $white;
+		border-radius: 50%;
+		width: 35px;
+		height: 35px;
+		margin-left: -3.5rem;
+		z-index: 1;
+		cursor: pointer;
+	}
 }

@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as *;
+@use "../components/brakepoints" as *;
 header {
 	display: flex;
 	align-items: center;
@@ -75,5 +76,29 @@ header {
 		sub {
 			color: $white;
 		}
+	}
+}
+
+@include md {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
+		width: 100%;
+		height: 15vh;
+		border-bottom: 1px solid $light-grayish-blue;
+		.logomenu {
+			display: flex;
+			align-items: center;
+			.navMenu {
+				display: block;
+				margin-right: 1rem;
+				margin-left: 1rem;
+			}
+		}
+	}
+	.navContainer {
+		display: none;
 	}
 }

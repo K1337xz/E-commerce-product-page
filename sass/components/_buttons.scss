@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as *;
+@use "../components/brakepoints" as *;
 input[type="number"] {
 	-moz-appearance: textfield;
 	width: 22%;
@@ -98,5 +99,85 @@ input::-webkit-inner-spin-button {
 		border: none;
 		outline: none;
 		cursor: pointer;
+	}
+}
+@include md {
+	input[type="number"] {
+		-moz-appearance: textfield;
+		width: 85%;
+		height: 8vh;
+		background-color: $light-grayish-blue;
+		font-size: 16px;
+		text-align: center;
+		outline: none;
+		border: none;
+		font-weight: 700;
+	}
+	#decrement {
+		width: 10%;
+		height: 8vh;
+		margin-right: -1rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		background-color: $light-grayish-blue;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		color: $orange;
+		font-size: 16px;
+		background-image: url(/images/icon-minus.svg);
+		background-repeat: no-repeat;
+		background-position: 50%;
+	}
+	#increment {
+		width: 10%;
+		height: 8vh;
+		margin-left: -1rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		background-color: $light-grayish-blue;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		color: $orange;
+		font-size: 16px;
+		background-image: url(/images/icon-plus.svg);
+		background-repeat: no-repeat;
+		background-position: 50%;
+	}
+	.buttonCart {
+		width: 85%;
+		height: 8vh;
+		border-radius: 10px;
+		border: none;
+		outline: none;
+		background-color: $orange;
+		color: $white;
+		cursor: pointer;
+		font-weight: 700;
+		background-image: url(/images/icon-cart.svg);
+		background-repeat: no-repeat;
+		background-position: 23% 50%;
+		margin-left: 2rem;
+		-webkit-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
+		-moz-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
+		box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
+		-webkit-transition: width 0.5s linear;
+		-moz-transition: width 0.5s linear;
+		-ms-transition: width 0.5s linear;
+		-o-transition: width 0.5s linear;
+		transition: width 0.5s linear;
+		&:hover {
+			opacity: 0.5;
+			width: 50%;
+			-webkit-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+			-moz-box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+			box-shadow: 8px 29px 52px -17px rgba(255, 140, 26, 1);
+			-webkit-transition: width 0.5s linear;
+			-moz-transition: width 0.5s linear;
+			-ms-transition: width 0.5s linear;
+			-o-transition: width 0.5s linear;
+			transition: width 0.5s linear;
+		}
 	}
 }

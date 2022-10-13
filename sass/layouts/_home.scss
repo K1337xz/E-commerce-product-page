@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as *;
+@use "../components/brakepoints" as *;
 body {
 	display: flex;
 	flex-direction: column;
@@ -68,4 +69,67 @@ body {
 	color: $dark-grayish-blue;
 	font-weight: 700;
 	text-decoration: line-through;
+}
+@include md {
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		margin-top: 0rem;
+	}
+	.rightContent {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		margin-left: 1rem;
+		height: 75vh;
+		flex: 2;
+		h1 {
+			color: $orange;
+			text-transform: uppercase;
+			font-size: 20px;
+			margin-top: 1rem;
+			font-weight: 700;
+		}
+		h2 {
+			width: 90%;
+			font-size: 30px;
+		}
+		p {
+			color: $dark-grayish-blue;
+			text-align: left;
+			margin-right: 5rem;
+			margin-top: 1rem;
+			width: 85%;
+		}
+	}
+	.pricewrapper {
+		display: flex;
+		align-items: center;
+		margin-top: 1rem;
+		.pricedisc {
+			display: flex;
+			align-items: center;
+			margin-top: -3rem;
+		}
+		p {
+			color: $black;
+			font-weight: 700;
+			font-size: 26px;
+		}
+		.discount {
+			background-color: $pale-orange;
+			color: $orange;
+			font-weight: 400;
+			border-radius: 4px;
+			font-size: 15px;
+		}
+	}
+	.orginal {
+		margin-top: 0rem;
+		margin-bottom: 2rem;
+	}
 }
