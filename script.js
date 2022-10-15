@@ -177,3 +177,36 @@ deleteItems.addEventListener("click", () => {
 chcekBtn.addEventListener("click", (e) => {
 	window.location.reload();
 });
+
+//mobile gallery arrows
+const arrowRightMobile = document.querySelector(".arrowRightMobile");
+const arrowLeftMobile = document.querySelector(".arrowLeftMobile");
+let arrowClick = 1;
+arrowRightMobile.addEventListener("click", () => {
+	arrowClick++;
+	if (arrowClick > 4) {
+		arrowClick = 1;
+	}
+	mainimageGallery.src = `images/image-product-${arrowClick}.jpg`;
+});
+
+arrowLeftMobile.addEventListener("click", () => {
+	arrowClick--;
+	if (arrowClick < 1) {
+		arrowClick = 4;
+	}
+	mainimageGallery.src = `images/image-product-${arrowClick}.jpg`;
+});
+//close open mobile nav
+
+const closeMobile = document.querySelector(".closeMenuMobile");
+const openMobile = document.querySelector(".navMenu");
+const mainNav = document.querySelector(".mainNav");
+
+openMobile.addEventListener("click", () => {
+	mainNav.classList.add("activeMobile");
+});
+
+closeMobile.addEventListener("click", () => {
+	mainNav.classList.remove("activeMobile");
+});

@@ -195,8 +195,59 @@ header .navMenu {
     margin-right: 1rem;
     margin-left: 1rem;
   }
+  .mainNav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9;
+    transition: left 0.5s linear;
+  }
   .navContainer {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 50%;
+    z-index: 3;
+    background-color: hsl(0deg, 0%, 100%);
+  }
+  .navContainer ul {
+    cursor: pointer;
+  }
+  .navContainer li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 8vh;
+    color: hsl(0deg, 0%, 0%);
+    font-weight: 700;
+  }
+  .navContainer li:hover {
+    border-bottom: 3px solid hsl(26deg, 100%, 55%);
+    z-index: 1;
+  }
+  .navContainer a {
+    padding: 1rem;
+    text-decoration: none;
+    color: hsl(0deg, 0%, 0%);
+  }
+  .navContainer a:hover {
+    color: hsl(220deg, 13%, 13%);
+  }
+  .rightMenu .shopcart {
+    margin-right: 2rem;
+  }
+  .rightMenu .dropdowncart {
+    margin-right: 1rem;
+  }
+  .rightMenu .shopcartNumber {
+    width: 55%;
+  }
+  .activeMobile {
+    left: 0;
+    transition: left 0.5s linear;
   }
 }
 .dropdown {
@@ -276,6 +327,20 @@ header .navMenu {
   color: hsl(219deg, 9%, 45%);
 }
 
+@media (max-width: 700px) {
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 16%;
+    left: 9px;
+    width: 95%;
+    height: 40%;
+    border-radius: 20px;
+    box-shadow: 8px 8px 48px 0px rgb(33, 33, 33);
+    background-color: hsl(0deg, 0%, 100%);
+    z-index: 2;
+  }
+}
 .gallery {
   width: 55%;
   height: 75vh;
@@ -360,10 +425,12 @@ header .navMenu {
     width: 100%;
     cursor: pointer;
     border-radius: 0%;
+    pointer-events: none;
+    transition: width 1s linear;
   }
   .arrowLeftMobile {
     display: block;
-    background-image: url(/images/icon-previous.svg);
+    background-image: url(../images/icon-previous.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: hsl(0deg, 0%, 100%);
@@ -376,7 +443,7 @@ header .navMenu {
   }
   .arrowRightMobile {
     display: block;
-    background-image: url(/images/icon-next.svg);
+    background-image: url(../images/icon-next.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-color: hsl(0deg, 0%, 100%);
@@ -386,6 +453,10 @@ header .navMenu {
     margin-left: -3.5rem;
     z-index: 1;
     cursor: pointer;
+  }
+  .activeG {
+    width: 100%;
+    transition: width 1s linear;
   }
 }
 body {
@@ -549,7 +620,7 @@ input[type=number] {
   cursor: pointer;
   color: hsl(26deg, 100%, 55%);
   font-size: 16px;
-  background-image: url(/images/icon-minus.svg);
+  background-image: url(../images/icon-minus.svg);
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -566,7 +637,7 @@ input[type=number] {
   cursor: pointer;
   color: hsl(26deg, 100%, 55%);
   font-size: 16px;
-  background-image: url(/images/icon-plus.svg);
+  background-image: url(../images/icon-plus.svg);
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -623,7 +694,7 @@ input::-webkit-inner-spin-button {
   input[type=number] {
     -moz-appearance: textfield;
     width: 85%;
-    height: 8vh;
+    height: auto;
     background-color: hsl(223deg, 64%, 98%);
     font-size: 16px;
     text-align: center;
@@ -632,51 +703,54 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
   }
   #decrement {
-    width: 10%;
-    height: 8vh;
-    margin-right: -1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    display: block;
+    width: 9%;
+    height: 6.6vh;
+    margin-left: 0rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.7rem;
     background-color: hsl(223deg, 64%, 98%);
     outline: none;
     border: none;
     cursor: pointer;
     color: hsl(26deg, 100%, 55%);
     font-size: 16px;
-    background-image: url(/images/icon-minus.svg);
+    background-image: url(../images/icon-minus.svg);
     background-repeat: no-repeat;
     background-position: 50%;
   }
   #increment {
+    display: block;
     width: 10%;
-    height: 8vh;
+    height: 6.6vh;
     margin-left: -1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 1.7rem;
     background-color: hsl(223deg, 64%, 98%);
     outline: none;
     border: none;
     cursor: pointer;
     color: hsl(26deg, 100%, 55%);
     font-size: 16px;
-    background-image: url(/images/icon-plus.svg);
+    background-image: url(../images/icon-plus.svg);
     background-repeat: no-repeat;
     background-position: 50%;
   }
   .buttonCart {
-    width: 85%;
-    height: 8vh;
+    width: 95%;
+    height: 5vh;
     border-radius: 10px;
     border: none;
     outline: none;
     background-color: hsl(26deg, 100%, 55%);
     color: hsl(0deg, 0%, 100%);
     cursor: pointer;
+    margin-top: 1rem;
     font-weight: 700;
-    background-image: url(/images/icon-cart.svg);
+    background-image: url(../images/icon-cart.svg);
     background-repeat: no-repeat;
     background-position: 23% 50%;
-    margin-left: 2rem;
+    margin-left: 0rem;
     box-shadow: 8px 57px 85px -33px rgb(255, 140, 26);
     transition: width 0.5s linear;
   }
@@ -685,6 +759,17 @@ input::-webkit-inner-spin-button {
     width: 50%;
     box-shadow: 8px 29px 52px -17px rgb(255, 140, 26);
     transition: width 0.5s linear;
+  }
+  .toCart label {
+    display: flex;
+  }
+  .closeMenuMobile {
+    display: block;
+    background-image: url(../images/icon-close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
   }
 }
 * {

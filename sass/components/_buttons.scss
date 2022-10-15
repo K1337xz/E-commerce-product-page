@@ -23,7 +23,7 @@ input[type="number"] {
 	cursor: pointer;
 	color: $orange;
 	font-size: 16px;
-	background-image: url(/images/icon-minus.svg);
+	background-image: url(../images/icon-minus.svg);
 	background-repeat: no-repeat;
 	background-position: 50%;
 }
@@ -39,7 +39,7 @@ input[type="number"] {
 	cursor: pointer;
 	color: $orange;
 	font-size: 16px;
-	background-image: url(/images/icon-plus.svg);
+	background-image: url(../images/icon-plus.svg);
 	background-repeat: no-repeat;
 	background-position: 50%;
 }
@@ -105,7 +105,7 @@ input::-webkit-inner-spin-button {
 	input[type="number"] {
 		-moz-appearance: textfield;
 		width: 85%;
-		height: 8vh;
+		height: auto;
 		background-color: $light-grayish-blue;
 		font-size: 16px;
 		text-align: center;
@@ -114,51 +114,54 @@ input::-webkit-inner-spin-button {
 		font-weight: 700;
 	}
 	#decrement {
-		width: 10%;
-		height: 8vh;
-		margin-right: -1rem;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		display: block;
+		width: 9%;
+		height: 6.6vh;
+		margin-left: 0rem;
+		padding-top: 2.5rem;
+		padding-bottom: 1.7rem;
 		background-color: $light-grayish-blue;
 		outline: none;
 		border: none;
 		cursor: pointer;
 		color: $orange;
 		font-size: 16px;
-		background-image: url(/images/icon-minus.svg);
+		background-image: url(../images/icon-minus.svg);
 		background-repeat: no-repeat;
 		background-position: 50%;
 	}
 	#increment {
+		display: block;
 		width: 10%;
-		height: 8vh;
+		height: 6.6vh;
 		margin-left: -1rem;
-		padding-top: 2rem;
-		padding-bottom: 2rem;
+		padding-top: 2.5rem;
+		padding-bottom: 1.7rem;
 		background-color: $light-grayish-blue;
 		outline: none;
 		border: none;
 		cursor: pointer;
 		color: $orange;
 		font-size: 16px;
-		background-image: url(/images/icon-plus.svg);
+		background-image: url(../images/icon-plus.svg);
 		background-repeat: no-repeat;
 		background-position: 50%;
 	}
 	.buttonCart {
-		width: 85%;
-		height: 8vh;
+		width: 95%;
+		height: 5vh;
 		border-radius: 10px;
 		border: none;
 		outline: none;
 		background-color: $orange;
 		color: $white;
 		cursor: pointer;
+		margin-top: 1rem;
 		font-weight: 700;
-		background-image: url(/images/icon-cart.svg);
+		background-image: url(../images/icon-cart.svg);
 		background-repeat: no-repeat;
 		background-position: 23% 50%;
-		margin-left: 2rem;
+		margin-left: 0rem;
 		-webkit-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
 		-moz-box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
 		box-shadow: 8px 57px 85px -33px rgba(255, 140, 26, 1);
@@ -179,5 +182,18 @@ input::-webkit-inner-spin-button {
 			-o-transition: width 0.5s linear;
 			transition: width 0.5s linear;
 		}
+	}
+	.toCart {
+		label {
+			display: flex;
+		}
+	}
+	.closeMenuMobile {
+		display: block;
+		background-image: url(../images/icon-close.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 50px;
+		height: 50px;
 	}
 }

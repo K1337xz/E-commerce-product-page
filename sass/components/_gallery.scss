@@ -77,16 +77,17 @@
 		justify-content: center;
 		flex: 2;
 		margin-bottom: 1rem;
-
 		img {
 			width: 100%;
 			cursor: pointer;
 			border-radius: 0%;
+			pointer-events: none;
+			transition: width 1s linear;
 		}
 	}
 	.arrowLeftMobile {
 		display: block;
-		background-image: url(/images/icon-previous.svg);
+		background-image: url(../images/icon-previous.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-color: $white;
@@ -99,7 +100,7 @@
 	}
 	.arrowRightMobile {
 		display: block;
-		background-image: url(/images/icon-next.svg);
+		background-image: url(../images/icon-next.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-color: $white;
@@ -109,5 +110,9 @@
 		margin-left: -3.5rem;
 		z-index: 1;
 		cursor: pointer;
+	}
+	.activeG {
+		width: 100%;
+		transition: width 1s linear;
 	}
 }

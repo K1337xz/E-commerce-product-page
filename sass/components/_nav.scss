@@ -98,7 +98,61 @@ header {
 			}
 		}
 	}
+	.mainNav {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.8);
+		z-index: 9;
+		transition: left 0.5s linear;
+	}
 	.navContainer {
-		display: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 100vh;
+		width: 50%;
+		z-index: 3;
+		background-color: $white;
+
+		ul {
+			cursor: pointer;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			list-style: none;
+			height: 8vh;
+			color: $black;
+			font-weight: 700;
+			&:hover {
+				border-bottom: 3px solid $orange;
+				z-index: 1;
+			}
+		}
+		a {
+			padding: 1rem;
+			text-decoration: none;
+			color: $black;
+			&:hover {
+				color: $very-dark-blue;
+			}
+		}
+	}
+	.rightMenu {
+		.shopcart {
+			margin-right: 2rem;
+		}
+		.dropdowncart {
+			margin-right: 1rem;
+		}
+		.shopcartNumber {
+			width: 55%;
+		}
+	}
+	.activeMobile {
+		left: 0;
+		transition: left 0.5s linear;
 	}
 }
