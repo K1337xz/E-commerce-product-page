@@ -44,17 +44,22 @@ for (let z = 0; z < thumbnailItemsFull.length; z++) {
 	});
 }
 mainimageGallery.addEventListener("click", () => {
-	openFull.style.display = `block`;
-	openFull.style.left = `0`;
-	mainimageGalleryFull.src = mainimageGallery.src;
-	let replaceFull = mainimageGalleryFull.src.replace(
-		".jpg",
-		"-thumbnail.jpg"
-	);
-	for (let c = 0; c < thumbnailItemsFull.length; c++) {
-		thumbnailItemsFull[c].classList.remove("active");
-		if (replaceFull === thumbnailItemsFull[c].src) {
-			thumbnailItemsFull[c].classList.add("active");
+	let windowWidth = window.innerWidth;
+	if (windowWidth <= 700) {
+		openFull.style.display = `none`;
+	} else {
+		openFull.style.display = `block`;
+		openFull.style.left = `0`;
+		mainimageGalleryFull.src = mainimageGallery.src;
+		let replaceFull = mainimageGalleryFull.src.replace(
+			".jpg",
+			"-thumbnail.jpg"
+		);
+		for (let c = 0; c < thumbnailItemsFull.length; c++) {
+			thumbnailItemsFull[c].classList.remove("active");
+			if (replaceFull === thumbnailItemsFull[c].src) {
+				thumbnailItemsFull[c].classList.add("active");
+			}
 		}
 	}
 });
@@ -209,4 +214,14 @@ openMobile.addEventListener("click", () => {
 
 closeMobile.addEventListener("click", () => {
 	mainNav.classList.remove("activeMobile");
+});
+
+//swipe left/right
+let touchstartX = 0;
+let touchendX = 0;
+
+mainimageGallery.addEventListener("touchstart", handleSwipe);
+mainimageGallery.addEventListener("touchend", (e) => {
+	touchendX = e.screenX;
+	handleSwipe();
 });

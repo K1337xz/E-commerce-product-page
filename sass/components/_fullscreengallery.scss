@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as *;
+@use "../components/brakepoints" as *;
 .gallery-fullscren {
 	display: none;
 	position: fixed;
@@ -93,4 +94,6 @@
 }
 .blurwithz {
 	z-index: -1;
+}
+@include md {
 }
