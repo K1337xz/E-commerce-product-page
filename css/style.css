@@ -738,7 +738,7 @@ input::-webkit-inner-spin-button {
   }
   .buttonCart {
     width: 95%;
-    height: 5vh;
+    height: 7vh;
     border-radius: 10px;
     border: none;
     outline: none;
@@ -765,7 +765,7 @@ input::-webkit-inner-spin-button {
   }
   .closeMenuMobile {
     display: block;
-    background-image: url(../images/icon-close.svg);
+    background-image: url(../images/icon-close-black.svg);
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
