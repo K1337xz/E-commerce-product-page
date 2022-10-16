@@ -217,11 +217,27 @@ closeMobile.addEventListener("click", () => {
 });
 
 //swipe left/right
-let touchstartX = 0;
-let touchendX = 0;
-
-mainimageGallery.addEventListener("touchstart", handleSwipe);
-mainimageGallery.addEventListener("touchend", (e) => {
-	touchendX = e.screenX;
-	handleSwipe();
-});
+let startPositionX;
+let endPosisitonX;
+let swipe = 1;
+function startPosition(ev) {
+	startPositionX = ev.touches[0].clientX;
+	/* console.log(startPositionX); */
+}
+function endPosisiton(ev) {
+	endPosisitonX = ev.changedTouches[0].clientX;
+	let swipeSide = startPositionX - endPosisitonX;
+	if (swipeSide > 0 && swipeSide > 50) {
+		swipe++;
+		if (swipe > 4) {
+			swipe = 1;
+		}
+		mainimageGallery.src = `images/image-product-${swipe}.jpg`;
+		console.log("left", swipe);
+	} else if (swipeSide < 0 && swipeSide < -50) {
+		console.log("right");
+	}
+	console.log(swipeSide);
+}
+mainimageGallery.addEventListener("touchstart", startPosition);
+mainimageGallery.addEventListener("touchend", endPosisiton);
