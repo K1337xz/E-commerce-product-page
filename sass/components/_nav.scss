@@ -107,36 +107,37 @@ header {
 		z-index: 9;
 		transition: left 0.5s linear;
 	}
-	.navContainer {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
+	.navC {
 		height: 100vh;
 		width: 50%;
 		z-index: 3;
 		background-color: $white;
-
-		ul {
-			cursor: pointer;
-		}
-		li {
+		.navContainer {
 			display: flex;
-			align-items: center;
-			list-style: none;
-			height: 8vh;
-			color: $black;
-			font-weight: 700;
-			&:hover {
-				border-bottom: 3px solid $orange;
-				z-index: 1;
+			flex-direction: column;
+			justify-content: flex-start;
+			ul {
+				cursor: pointer;
 			}
-		}
-		a {
-			padding: 1rem;
-			text-decoration: none;
-			color: $black;
-			&:hover {
-				color: $very-dark-blue;
+			li {
+				display: flex;
+				align-items: center;
+				list-style: none;
+				height: 8vh;
+				color: $black;
+				font-weight: 700;
+				&:hover {
+					border-bottom: 3px solid $orange;
+					z-index: 1;
+				}
+			}
+			a {
+				padding: 1rem;
+				text-decoration: none;
+				color: $black;
+				&:hover {
+					color: $very-dark-blue;
+				}
 			}
 		}
 	}
