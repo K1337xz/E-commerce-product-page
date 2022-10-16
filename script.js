@@ -233,11 +233,13 @@ function endPosisiton(ev) {
 			swipe = 1;
 		}
 		mainimageGallery.src = `images/image-product-${swipe}.jpg`;
-		console.log("left", swipe);
 	} else if (swipeSide < 0 && swipeSide < -50) {
-		console.log("right");
+		swipe--;
+		if (swipe < 1) {
+			swipe = 4;
+		}
+		mainimageGallery.src = `images/image-product-${swipe}.jpg`;
 	}
-	console.log(swipeSide);
 }
 mainimageGallery.addEventListener("touchstart", startPosition);
 mainimageGallery.addEventListener("touchend", endPosisiton);
