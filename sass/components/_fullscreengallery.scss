@@ -46,7 +46,7 @@
 	}
 	.leftArrow {
 		display: block;
-		background-image: url(/images/icon-previous.svg);
+		background-image: url(../images/icon-previous.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-color: $white;
@@ -59,7 +59,7 @@
 	}
 	.rightArrow {
 		display: block;
-		background-image: url(/images/icon-next.svg);
+		background-image: url(../images/icon-next.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-color: $white;
@@ -74,7 +74,7 @@
 		position: relative;
 		left: 70%;
 		display: block;
-		background-image: url(/images/icon-close.svg);
+		background-image: url(../images/icon-close.svg);
 		background-repeat: no-repeat;
 		background-position: center;
 		border-radius: 50%;
